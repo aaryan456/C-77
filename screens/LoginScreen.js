@@ -65,76 +65,7 @@ export default class Login extends Component{
         })
         }
       }
-showmodal= ()=>{
-    return(
-      <Modal animationType="fade" transparent={true} visible={this.state.isModalVisible} >
- <View style = {styles.modalContainer}>
-            <ScrollView style = {{width:'100%'}} >
-                <KeyboardAvoidingView style = {styles.KeyboardAvoidingView}>
-                    <Text style = {styles.modalTitle}>
-                    Registration Form
-                    </Text>
-                  <TextInput style = {styles.formTextInput}
-                  placeholder = {"first name"}
-                  maxLength = {9}
-                  onChangeText = {(text)=>{this.setState({firstname:text})}}
-                  />
-                  <TextInput style = {styles.formTextInput}
-                  placeholder = {"last name"}
-                  maxLength = {9}
-                  onChangeText = {(text)=>{this.setState({lastname:text})}}
-                  />
-                 <TextInput style = {styles.formTextInput}
-                  placeholder = {"contact"}
-                  maxLength = {10}
-                  keyboardType = {"numeric"}
-                  onChangeText = {(text)=>{this.setState({contact:text})}}
-                  />
-             <TextInput style = {styles.formTextInput}
-                  placeholder = {"address"}
-                multiline = {true}
-                  onChangeText = {(text)=>{this.setState({address:text})}}
-                  />
 
-             <TextInput style = {styles.formTextInput}
-                  placeholder = {"email"}
-                keyboardType = {"email-address"}
-                  onChangeText = {(text)=>{this.setState({emailID:text})}}
-                  />
-                  <TextInput style = {styles.formTextInput}
-                  placeholder = {"password"}
-                 secureTextEntry = {true}
-                  onChangeText = {(text)=>{this.setState({Password:text})}}
-                  />
-                  <TextInput style = {styles.formTextInput}
-                  placeholder = {"confirmpassword"}
-                 secureTextEntry = {true}
-                  onChangeText = {(text)=>{this.setState({confirmpassword:text})}}
-                  />
-                  <View style = {styles.modalBackButton}>
-                    <TouchableOpacity style = {styles.registerButton}
-                    onPress = {()=>{this.signUp(this.state.emailID,this.state.Password,this.state.confirmpassword)}}
-                    >
-                      <Text style = {styles.registerButtonText}>Register</Text>
-
-                    </TouchableOpacity>
-                    </View>
-                    <View style = {styles.modalBackButton}>
-                    <TouchableOpacity style = {styles.cancelButton}
-                    onPress = {()=>this.setState({"isModalVisible":false})}
-                    >
-                      <Text style = {styles.registerButtonText}>cancel</Text>
-
-                    </TouchableOpacity>
-                  
-
-                    </View>
-        </KeyboardAvoidingView>
-      </ScrollView>
-    </View>
-  </Modal>
-)
-}
  
 
     render(){
